@@ -1959,7 +1959,7 @@ for i, (cpu, memory, gpu, disk) in enumerate(combinations, start=1):
         x = list(range(1, 32))  # 32 time points instead of 16
         graph_points = interpolate_points(graph_points)
         if final_value < 3:
-            final_value = 10
+            final_value *= 2
         if final_value < 20 and resource in ["CPU", "GPU"]:
             # # add another sinusoidal wave to the graph
             # graph_points = [
